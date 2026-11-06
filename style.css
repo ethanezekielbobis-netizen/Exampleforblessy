@@ -1,0 +1,178 @@
+
+/* GENERAL DESIGN */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #26364a;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #17365d;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #70c1ff;
+}
+
+/* HERO SECTION */
+.hero {
+    background-color: #dcecff;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.hero h1 {
+    color: #17365d;
+    font-size: 38px;
+}
+
+.hero p {
+    color: #52677f;
+    font-size: 17px;
+}
+
+/* CONTENT */
+section {
+    background-color: white;
+    margin: 35px auto;
+    padding: 35px;
+    width: 80%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px #dce3ed;
+}
+
+h2 {
+    color: #2465a5;
+}
+
+/* TRANSFORMATION BOX */
+.transform-box {
+    width: 150px;
+    height: 150px;
+    background-color: #3478c9;
+    color: white;
+    margin: 40px auto;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.transform-box:hover {
+    transform: rotate(15deg) scale(1.2);
+}
+
+/* ANIMATION BOX */
+.animation-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3478c9;
+    position: relative;
+    animation: moveBox 4s infinite;
+    border-radius: 12px;
+}
+
+@keyframes moveBox {
+    0% {
+        left: 0;
+        background-color: #3478c9;
+    }
+
+    50% {
+        left: 200px;
+        background-color: #f5bd45;
+    }
+
+    100% {
+        left: 0;
+        background-color: #3478c9;
+    }
+}
+
+/* IMAGE GALLERY */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 230px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+}
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    background-color: #3478c9;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background-color: #17365d;
+}
+
+/* FOOTER */
+footer {
+    background-color: #17365d;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 50px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    section {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
